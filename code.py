@@ -40,8 +40,8 @@ try:
     end_date = datetime.datetime.strptime(end_date, '%Y-%m-%d')
     df_filtered = df_original[(df_original['time'] >= start_date) & (df_original['time'] <= end_date)]
     
-#except ValueError: 
-    #st.error("日期格式錯誤，入 'YYYY-MM-DD' 格式的日期")
+except ValueError: 
+    st.error("日期格式錯誤，入 'YYYY-MM-DD' 格式的日期")
 
 ###### (2) 轉化為字典 ######:
 KBar_dic = df_filtered.to_dict()
