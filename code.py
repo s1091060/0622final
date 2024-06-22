@@ -433,7 +433,7 @@ with st.expander("K線圖, 布林通道"):
 import plotly.graph_objects as go
 from plotly.subplots import make_subplots
 
-with st.expander("唐奇安通道圖"):
+with st.expander("K線圖, 唐奇安通道圖"):
     fig5 = make_subplots(specs=[[{"secondary_y": True}]])
     fig5.add_trace(go.Candlestick(x=KBar_df['Time'],
                     open=KBar_df['Open'], high=KBar_df['High'],
