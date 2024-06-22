@@ -33,11 +33,6 @@ def load_data(url):
 
 df_original = load_data('2002.pkl')
 
-# 检查数据的列名
-st.write("数据列名:", df_original.columns)
-
-# 打印前几行以检查数据内容
-st.write("数据预览:", df_original.head())
 
 # 尝试将日期列转换为 datetime 类型，处理格式不一致的情况
 try:
@@ -67,9 +62,6 @@ try:
 
     # 根据用户选择的日期范围进行过滤
     df_filtered = df_original[(df_original['time'] >= start_date) & (df_original['time'] <= end_date)]
-    
-    # 显示过滤后的数据
-    st.write("过滤后的数据:", df_filtered)
     
 except ValueError:
     # 如果日期格式不正确，显示错误信息
