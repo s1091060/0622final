@@ -63,9 +63,9 @@ try:
     # 根据用户选择的日期范围进行过滤
     df_filtered = df_original[(df_original['time'] >= start_date) & (df_original['time'] <= end_date)]
     
-except ValueError:
+#except ValueError:
     # 如果日期格式不正确，显示错误信息
-    st.error("日期格式错误，请输入 'YYYY-MM-DD' 格式的日期")
+    #st.error("日期格式错误，请输入 'YYYY-MM-DD' 格式的日期")
 
 
 ###### (2) 轉化為字典 ######:
